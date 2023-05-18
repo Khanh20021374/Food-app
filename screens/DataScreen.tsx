@@ -1,21 +1,13 @@
-import foodItemsData from '../assets/foodItems.json'
 import { Modal, StyleSheet, Text, TouchableOpacity, View, Dimensions, Image, Animated, ScrollView } from 'react-native';
 import { useState, useRef } from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-
-const windowHeight = Dimensions.get('window').height;
-const modalHeight = Math.round(windowHeight * 0.9);
+import foodItemsData from '../assets/foodItems.json'
+import FoodModal from './FoodModal';
 
 const IMAGE_SIZE = 60;
 const SPACING = 20;
 const ITEM_SIZE = IMAGE_SIZE + SPACING * 3;
-
-
-
-const DataScreen: React.FC = () => {
-const [modalVisible, setModalVisible] = useState(false);
-const [selectedFoodItem, setSelectedFoodItem] = useState<FoodItem | null>(null);
 
 interface FoodItem {
   id: string;
@@ -26,36 +18,39 @@ interface FoodItem {
   image: string;
 }
 
-const foodItems: FoodItem[] = foodItemsData
+const DataScreen: React.FC = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+  const [selectedFoodItem, setSelectedFoodItem] = useState<FoodItem | null>(null);
 
-const scrollY = useRef(new Animated.Value(0)).current;
 
+  const foodItems: FoodItem[] = foodItemsData
 
+  const scrollY = useRef(new Animated.Value(0)).current;
 
-const renderItem = ({ item, index }) => {
-  const inputRange = [
-    -1,
-    0,
-    ITEM_SIZE * index,
-    ITEM_SIZE * (index + 2),
-  ]
+  const renderItem = ({ item, index }) => {
+    const inputRange = [
+      -1,
+      0,
+      ITEM_SIZE * index,
+      ITEM_SIZE * (index + 2),
+    ]
 
-  const opacityInputRange = [
-    -1,
-    0,
-    ITEM_SIZE * index,
-    ITEM_SIZE * (index + 1),
-  ]
-  
-  const scale = scrollY.interpolate({
-    inputRange,
-    outputRange: [1, 1, 1, 0]
-  })
+    const opacityInputRange = [
+      -1,
+      0,
+      ITEM_SIZE * index,
+      ITEM_SIZE * (index + 1),
+    ]
+    
+    const scale = scrollY.interpolate({
+      inputRange,
+      outputRange: [1, 1, 1, 0]
+    })
 
-  const opacity = scrollY.interpolate({
-    inputRange: opacityInputRange,
-    outputRange: [1, 1, 1, 0]
-  })
+    const opacity = scrollY.interpolate({
+      inputRange: opacityInputRange,
+      outputRange: [1, 1, 1, 0]
+    })
 
 
   return (
@@ -82,7 +77,7 @@ const renderItem = ({ item, index }) => {
     </Animated.View>
   </TouchableOpacity>
   )
-  };
+};
 
 
 const handleFoodItemPress = (item: FoodItem) => {
@@ -170,32 +165,7 @@ return (
       }}
     /> 
 
-    <Modal visible={modalVisible} animationType="slide">
-        <Image source={getImageSource(selectedFoodItem?.image)} style={styles.modalImage} />
-        <TouchableOpacity onPress={closeModal} style={styles.backButton}>
-          <View style={styles.backButtonCircle}>
-            <Icon name="arrow-back" size={24} color="white" />
-          </View>
-        </TouchableOpacity>
-
-        <View style={styles.modalContainer}>
-            <ScrollView>
-              <Text style={styles.modalTitle}>{selectedFoodItem?.name}</Text>
-              <View style={styles.sectionContent}>
-                <Text style={styles.sectionTitle}>Nguồn gốc / Lịch sử</Text>
-                <Text style={styles.sectionText}>{selectedFoodItem?.origin}</Text>
-              </View>
-              <View style={styles.sectionContent}>
-                <Text style={styles.sectionTitle}>Nguyên liệu chính</Text>
-                <Text style={styles.sectionText}>{selectedFoodItem?.recipe}</Text>
-              </View>
-              <View style={styles.sectionContent}>
-                <Text style={styles.sectionTitle}>Biến tấu</Text>
-                <Text style={styles.sectionText}>{selectedFoodItem?.variations.join('\n')}</Text>
-              </View>
-            </ScrollView>
-        </View>
-    </Modal>
+    <FoodModal selectedFoodItem={selectedFoodItem} onCloseModal={closeModal} />
   </View>
 );
 

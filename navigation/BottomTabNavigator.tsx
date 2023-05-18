@@ -30,7 +30,7 @@ export default function BottomTabNavigator() {
         name="Mục lục"
         component={TabDataNavigator}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon color={color} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />,
+          tabBarIcon: ({ color }) => <TabBarIcon color={color} name={Platform.OS === 'ios' ? 'ios-library-outline' : 'md-library-outline'} />,
         }}
       />
     </BottomTab.Navigator>

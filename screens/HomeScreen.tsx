@@ -14,15 +14,29 @@ import {Icon, ListItem} from 'react-native-elements';
 import * as ImagePicker from 'expo-image-picker';
 import { ModelService, IModelPredictionTiming,ModelPrediction } from '../components/ModelService';
 
+import foodItemsData from '../assets/foodItems.json'
+import FoodModal from './FoodModal';
+
+interface FoodItem {
+  id: string;
+  name: string;
+  origin: string;
+  recipe: string;
+  variations: string[];
+  image: string;
+}
 
 type State = {
   image: ImageManipulator.ImageResult; 
-  loading:boolean;
+  loading: boolean;
   isTfReady: boolean;
   isModelReady: boolean;
-  predictions: ModelPrediction[]|null;
-  error:string|null;
-  timing:IModelPredictionTiming|null;
+  predictions: ModelPrediction[] | null;
+  error: string | null;
+  timing: IModelPredictionTiming | null;
+  modalVisible: boolean;
+  selectedFoodItem: FoodItem | null;
+  foodItems: FoodItem[]
 };
 
 export default class HomeScreen extends React.Component<{},State> {
@@ -36,8 +50,10 @@ export default class HomeScreen extends React.Component<{},State> {
       isTfReady: false,
       isModelReady: false,
       predictions: null,
-      error:null,
-      timing:null
+      error: null,
+      timing: null,
+      selectedFoodItem: null,
+      foodItems: foodItemsData,
   }
 
   modelService!:ModelService;
@@ -55,13 +71,8 @@ export default class HomeScreen extends React.Component<{},State> {
         <ScrollView style={styles.container}>
             <View style={styles.container} >
 
-                <View style={styles.titleContainer}>
-                    <Text h1>{AppConfig.title}</Text>
-                </View>
-
-
                 <View>
-                  <Text>Model Status: {modelLoadingStatus}</Text>
+                  <Text style={{alignSelf: 'center', marginTop: 20, marginBottom: 250,}} >Model Status: {modelLoadingStatus}</Text>
                 </View>
 
                 <View style={styles.actionsContainer}>
@@ -71,58 +82,29 @@ export default class HomeScreen extends React.Component<{},State> {
                     </View>
                 </View>
 
-                <View style={styles.imageContainer}>
-                    <Image source={this.state.image} style={{height: 200, width: 200}}/>
-                </View>
-
-
-                <View style={styles.predictionsContainer}>
-                    {this.renderPredictions()}
-                </View>
+                
+                {this.renderPredictions()}
+                
             </View>
 
         </ScrollView>
     );
   }
 
+  closeModal = () => {
+    this.setState({selectedFoodItem: null, predictions: null})
+  };
 
   renderPredictions() {
       if (this.state.loading) {
           return <ActivityIndicator/>
       }
       let predictions= this.state.predictions || [];
-   
+      
       if (predictions.length > 0) {
+          let matchingFoodItem = this.state.foodItems.find((item) => item.image === predictions[0].className)
           return (
-              <View style={styles.predictionsContentContainer}>
-                  <Text h3>Predictions</Text>
-                  <View>
-                      {
-                          predictions.map((item, index) => (
-                              <ListItem key={index} >
-                                <ListItem.Content >
-
-                                  <ListItem.Title>{item.className}</ListItem.Title>
-                                  <ListItem.Subtitle>{`prob: ${item.probability.toFixed(AppConfig.precision)}`}</ListItem.Subtitle>
-                                </ListItem.Content>
-
-                              </ListItem>
-                          ))
-                      }
-                  </View>
-
-
-                  <Text h3>Timing (ms)</Text>
-                  <View>
-                    <Text>total time: {this.state.timing?.totalTime}</Text>
-                    <Text>loading time: {this.state.timing?.imageLoadingTime}</Text>
-                    <Text>preprocessing time: {this.state.timing?.imagePreprocessing}</Text>
-                    <Text>prediction time: {this.state.timing?.imagePrediction}</Text>
-                    <Text>decode time: {this.state.timing?.imageDecodePrediction}</Text>
-                   
-                  </View>
-
-              </View>
+              <FoodModal selectedFoodItem={matchingFoodItem ? matchingFoodItem : null} onCloseModal={this.closeModal} />
           )
       } else {
           return null
@@ -161,9 +143,6 @@ export default class HomeScreen extends React.Component<{},State> {
         })
 
         if (!response.canceled) {
-          //const source = { uri: response.uri }
-
-          //this.setState({ image: source })
           this._classifyImage(response.uri)
         }
       } catch (error) {
@@ -184,8 +163,6 @@ export default class HomeScreen extends React.Component<{},State> {
         });
 
         if (!response.canceled) {
-          //const source = { uri: response.uri }
-          
           this._classifyImage(response.uri)
         }
     }  catch (error) {
@@ -203,7 +180,7 @@ export default class HomeScreen extends React.Component<{},State> {
       
       this.setState({ image: res})
       console.log('numTensors (before prediction): ' + tf.memory().numTensors);
-      this.setState({ predictions: [] ,error:null , loading:true })
+      this.setState({ predictions: [] ,error: null , loading:true })
 
       const predictionResponse = await this.modelService.classifyImage(res);
       
@@ -241,14 +218,12 @@ const styles = StyleSheet.create({
   titleContainer: {
       alignItems: 'center',
       marginTop: 10,
-      //flex: 2,
       justifyContent: 'center',
   },
   actionsContainer: {
       alignItems: 'center',
       marginTop: 5,
       marginBottom: 5,
-      //flex: 1,
   },
   imageContainer: {
       alignItems: 'center',
