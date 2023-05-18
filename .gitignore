@@ -1,0 +1,9 @@
+# Node.js
+node_modules/
+
+# Expo
+.expo/
+.expo-shared/
+
+# Visual Studio Code
+.vscode/

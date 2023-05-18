@@ -1,0 +1,123 @@
+[
+    {
+      "id": "1",
+      "name": "Bánh canh",
+      "origin" : "Bánh canh có nguồn gốc từ Đông Nam Bộ, sau đó phổ biến khắp Việt Nam",
+      "recipe": "Sợi bánh canh, bột, gia vị phù hợp, giò/cua/ghẹ/cá/chả/thịt",
+      "variations": ["Bánh canh Trảng Bàng", "Bánh canh giò heo Bình Dương", "Bánh canh Phú Yên", "Bánh canh xứ Huế", "Bánh canh Bồng Sơn"],
+      "image": "banh_canh"
+    },
+    {
+      "id": "2",
+      "name": "Bánh chưng",
+      "origin" : "Là loại bánh duy nhất có lịch sử lâu đời trong ẩm thực truyền thống Việt Nam còn được sử sách nhắc lại, bánh chưng có vị trí đặc biệt trong tâm thức của cộng đồng người Việt và nguồn gốc của nó về truyền thuyết liên quan đến hoàng tử Lang Liêu vào đời vua Hùng thứ 6. Sự tích trên muốn nhắc nhở con cháu về truyền thống của dân tộc; là lời giải thích ý nghĩa cũng như nguồn cội của Bánh Chưng, Bánh Giầy trong văn hóa, đồng thời nhấn mạnh tầm quan trọng của cây lúa và thiên nhiên trong nền văn hoá lúa nước",
+      "recipe": "Lá để gói, lạt buộc, gạo nếp, đỗ xanh, thịt, gia vị các loại, phụ gia tạo màu",
+      "variations": ["Bánh chưng Nghệ An", "Bánh chưng Nhật Lệ", "Bánh chưng ngũ sắc", "Bánh chưng gấc", "Bánh chưng cốm"],
+      "image": "banh_chung"
+    },
+    {
+      "id": "3",
+      "name": "Bánh cuốn",
+      "origin" : "Trong An Nam chí lược, sử gia Lê Tắc chú rằng \"vào Tết Hàn thực, đem bánh cuốn tặng nhau\". Điểm nữa là trong thi phẩm Tặng bánh xuân cho ngài thiên sứ Trương Hiển Khanh (饋張顯卿春餅), năm 1291, vua Trần Nhân Tông cho hay: \"Hôm nay đúng ngày mồng 3 tháng 3, trên chiếc mâm chạm hình mây đỏ bày bánh xuân thái, là phong tục cũ của An Nam xưa nay\" (柘枝舞罷試春衫， 況值今朝三月三。 紅玉堆盤春菜餅， 從來風俗舊安南). Còn Chỉ Nam ngọc âm giải nghĩa dẫn rằng, bánh xuân thái cũng chính là tên gọi khác của bánh cuốn, sách này đồng thời nói: \"Quyển bính nhiều nhân càng ngon; Hiệu là bánh cuốn lăn tròn khéo thay\". Như vậy, vào thời Trần, thậm chí có thể truy lên thời Lý, nhằm tết Hàn thực, người Việt ăn bánh cuốn và có tục đem bánh cuốn tặng nhau, chứ chưa có tục ăn bánh trôi như thời Lê Nguyễn về sau. Bánh cuốn còn được gọi là bánh xuân (春餅) hoặc bánh xuân thái (春菜餅), trong có nhân (có thể gồm cả rau lẫn thịt), được cuốn tròn lại, hình dạng khá gần với bánh cuốn ngày nay",
+      "recipe": "Bột gạo, rau, thịt",
+      "variations": ["Bánh cuốn Lạng Sơn", "Bánh cuốn Hải Phòng", "Bánh cuốn Hà Nội", "Bánh cuốn Thanh Trì", "Bánh cuốn Hải Dương", "Bánh mướt Nghệ An"],
+      "image": "banh_cuon"
+    },
+    {
+      "id": "4",
+      "name": "Bánh khọt",
+      "origin" : "Theo những người gắn bó lâu năm với nghề làm bánh khọt, nguồn gốc của loại bánh này xuất phát từ bánh căn của vùng Bình Thuận, Ninh Thuận, Thanh Hoá",
+      "recipe": "Bột gạo/sắn, tôm, lá hẹ, lá hành",
+      "variations": ["Bánh khọt Vũng Tàu", "Bánh khọt thập cẩm", "Bánh khọt chay"],
+      "image": "banh_khot"
+    },
+    {
+      "id": "5",
+      "name": "Bánh mì Việt Nam",
+      "origin" : "Bánh mì Việt Nam có gốc từ bánh baguette, do người Pháp đưa vào miền Nam Việt Nam trong thế kỷ 20. Một số nhà nghiên cứu cho rằng món bánh mì đã có mặt tại Việt Nam từ 150 năm trước. Những thập kỉ sau, bánh mì Việt Nam lan ra khắp miền Trung và miền Nam, đặc biệt là ở Sài Gòn",
+      "recipe": "Bột mì, men nở, nước ấm, muối, giấm, đường, sữa tươi, dầu ăn",
+      "variations": ["Bánh mì thịt", "Bánh mì xíu", "Bánh mì nướng muối ớt", "Bánh mì trứng", "Bánh mì phô mai"],
+      "image": "banh_mi"
+    },
+    {
+      "id": "6",
+      "name": "Bánh tráng nướng",
+      "origin" : "Bánh tráng nướng là một món ăn nhẹ có xuất xứ từ Phan Rang (Ninh Thuận), sau đó rộng rãi ở Đà Lạt, Phan Thiết và phổ biến tại Sài Gòn",
+      "recipe": "Bánh tráng, thịt băm/xay, tôm khô, trứng cút, xúc xích, hành lá, gia vị",
+      "variations": [],
+      "image": "banh_trang_nuong"
+    },
+    {
+      "id": "7",
+      "name": "Bánh xèo",
+      "origin" : "Bánh xèo xuất hiện tại Việt Nam đã từ rất lâu nhưng nguồn gốc từ đâu thì vẫn còn nhiều ý kiến khác nhau. Có tài liệu cho rằng loại bánh này xuất phát từ món bánh khoái của Huế, ý kiến khác lại cho rằng công thức làm bánh được học từ người Chăm trong nhiều thế kỷ trước. Và cũng có người lại nói ẩm thực Nam Ấn trước thế kỷ XI mới là nguồn cảm hứng tạo nên bánh xèo. Nhưng dù nguồn gốc ở đâu, thì vẫn thừa nhận chiếc bánh xèo miền Trung vẫn là nguyên bản của vô số biến thể khác",
+      "recipe": "Bột gạo, nước, bột nghệ, thịt heo, tôm, giá",
+      "variations": ["Bánh xèo miền Trung", "Bánh xèo miền Tây", "Bánh xèo hải sản", "Bánh xèo miền Bắc", "Bánh xèo tôm nhảy Bình Định"],
+      "image": "banh_xeo"
+    },
+    {
+      "id": "8",
+      "name": "Bún",
+      "origin" : "Xuất xứ tại châu Á",
+      "recipe": "Gạo",
+      "variations": ["Bún riêu", "Bún bò Huế", "Bún mọc", "Bún cá", "Bún chả"],
+      "image": "bun"
+    },
+    {
+      "id": "9",
+      "name": "Canh chua",
+      "origin" : "Món canh chua bắt nguồn từ những lưu dân Việt sống quây quần quanh cửa sông, vùng duyên hải, nơi có nhiều cây bần bám trụ sinh sôi, nảy nở. Dưới gốc bần có một loài cá mắn đẻ, thịt ngọt, chuyên ăn quả bần chín rụng mà lớn, vừa hay con cá này lại hợp “gu” với quả bần tạo thành món canh chua cá đặc sắc, thơm ngon",
+      "recipe": "Rau củ quả, các loại thịt hay thủy sản, gia vị chua",
+      "variations": ["Canh chua cá lóc", "Canh chua gà lá giang", "Canh chua cá ngát", "Canh riêu cua", "Canh riêu hến", "Canh chua cá hồi"],
+      "image": "canh_chua"
+    },
+    {
+      "id": "10",
+      "name": "Cháo lòng",
+      "origin" : "Cháo lòng tương đối phổ thông thậm chí khá bình dân trong ẩm thực Việt Nam, được bán rộng rãi tại các cửa hàng lòng lợn trong cả nước, tạo nên một bộ ba sản phẩm được ăn theo thứ tự trong bữa ăn là tiết canh, lòng lợn, cháo lòng, và thường kết hợp với rượu đế",
+      "recipe": "Nước dùng, gạo, lòng lợn, gia vị",
+      "variations": ["Cháo lòng chay", "Cháo lòng gà"],
+      "image": "chao_long"
+    },
+    {
+      "id": "11",
+      "name": "Cơm tấm",
+      "origin" : "Ban đầu, Cơm tấm là một món ăn phổ biến của những người nông dân, công nhân tại vùng đồng bằng sông Cửu Long. Vào các năm mùa màng đói kém, nhiều người thường không có đủ gạo ngon để bán, vì vậy họ đã dùng gạo tấm (gạo bể) để nấu ăn vì nó luôn có sẵn trong nhà của nhiều hộ gia đình cũng như có tác dụng làm no lâu. Từ khi Việt Nam đô thị hóa vào nửa đầu thế kỷ 20, Cơm tấm đã trở nên phổ biến ở hầu khắp các tỉnh Nam Bộ, trong đó có Sài Gòn. Sau khi Sài Gòn trở thành một điểm du lịch với những du khách đến từ nhiều quốc gia trên thế giới, nhiều người bán hàng đã có vài điều chỉnh thành phần của Cơm tấm để phù hợp hơn với khẩu vị của thực khách nước ngoài. Ngoài ra, phần ăn sau đó cũng đã bắt đầu được phục vụ với dĩa và sử dụng muỗng, nĩa thay vì trong chén ăn với đũa",
+      "recipe": "Gạo tấm, sườn nướng, nước mắm pha, đồ chua, dưa leo, cà chua, mỡ hành",
+      "variations": ["Cơm tấm Sài Gòn sườn bì chả", "Cơm tấm Long Xuyên", "Cơm tấm chả trứng muối", "Cơm tấm sườn ram nước dừa", "Cơm tấm sườn que"],
+      "image": "com_tam"
+    },
+    {
+      "id": "12",
+      "name": "Gỏi cuốn",
+      "origin" : "Món ăn có nguồn gốc từ nhiều tỉnh Nam Bộ mang hương vị thanh mát, nhẹ bụng, phù hợp đổi vị trong những ngày nóng bức",
+      "recipe": "Thịt heo, tôm, rau thơm, bún, bánh tráng",
+      "variations": ["Thịt luộc cuốn", "Bò cuốn lá cải", "Phở cuốn", "Cá cuốn", "Nem chua", "Nem tai"],
+      "image": "goi_cuon"
+    },
+    {
+      "id": "13",
+      "name": "Hủ tiếu",
+      "origin" : "Hủ tiếu ,còn được viết là hủ tíu, là một món ăn được chế biến từ các chế phẩm từ sợi gạo của người Triều Châu và người Mân Nam, có nhiều điểm tương đồng với sa hà phấn của Quảng Đông và bản điều Khách Gia, được truyền đến nhiều vùng trong và ngoài nước. Trở thành thực phẩm phổ biến ở vùng Nam Trung Quốc và Đông Nam Á như ở miền Nam Việt Nam, Campuchia, Lào, Thái Lan, Singapore, v.v.",
+      "recipe": "Bánh hủ tiếu, thịt gia súc, thịt gia cầm, hải sản, nước dùng (làm từ xương heo, rau củ)",
+      "variations": ["Hủ tiếu Nam Vang", "Hủ tiếu Mỹ Tho", "Hủ tiếu bò kho", "Hủ tiếu xào"],
+      "image": "hu_tieu"
+    },
+    {
+      "id": "14",
+      "name": "Mì quảng",
+      "origin" : "Được xác định ngay từ tên gọi, mì quảng Đà Nẵng là món ăn được bắt nguồn từ Quảng Nam - Đà Nẵng xưa. Còn từ mỳ ý nói đến chất liệu bột để làm nên sợi, nhưng thực chất sợi mỳ lại làm từ bột gạo. Sở dĩ có tên gọi như vậy, theo nhiều tài liệu, mỳ quảng được ra đời từ sự giao thoa văn hóa giữa người Việt và người Tàu",
+      "recipe": "Mỳ gạo, tôm, thịt lợn/gà/bò, rau thơm, nghệ, lạc, ớt, chanh",
+      "variations": ["Mì Quảng chay", "Mì Quảng trộn", "Mì Quảng Tôm Thịt", "Mì Quảng sườn non", "Mì quảng ếch"],
+      "image": "mi_quang"
+    },
+    {
+      "id": "15",
+      "name": "Phở",
+      "origin" : "Phở như ngày nay được cho là đã ra đời và định hình vào những năm đầu thế kỷ 20. Hà Nội hay Nam Định là địa phương thường được cho là xuất xứ của phở. Ở Nam Định, phở có nguồn gốc từ làng Vân Cù (xã Đồng Sơn, Nam Trực), nổi tiếng với dòng họ Cồ đã mang nghề nấu phở gia truyền đi khắp mọi nơi sinh cơ lập nghiệp. Món phở được tin là bắt đầu phổ biến trong bối cảnh hình thành Nhà máy dệt Nam Định. Phở cũng xuất hiện ở Hà Nội từ những năm đầu thế kỷ 20, đây cũng được biết đến là nơi đã làm cho món ăn này trở nên nổi tiếng. Tuy nhiên một số nhà văn, nhà thơ và nhà sử học đều nghiên cứu và thống nhất cho rằng phở xuất hiện đầu tiên tại Ô Quan Chưởng - Hà Nội bởi thời gian Pháp thuộc địa, Ô Quan Chưởng là nơi tập kết xương bò bỏ đi không dùng tới, người dân đã dùng để ninh và tạo nên món phở từ đó",
+      "recipe": "Bánh phở, nước dùng, thịt bò hoặc thịt gà kèm với một số loại gia vị khác",
+      "variations": ["Phở gà", "Phở tái", "Phở tái lăn", "Phở gầu", "Phở sốt vang"],
+      "image": "pho"
+    }
+]
+  
